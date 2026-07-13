@@ -1,0 +1,31 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio project settings
+.Rproj.user/
+
+# renv local library and temporary files
+renv/library/
+renv/staging/
+renv/python/
+renv/.cache/
+
+# Quarto generated files
+.quarto/
+_freeze/
+
+# Rendered output
+output/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+~*
+/.quarto/
+**/*.quarto_ipynb

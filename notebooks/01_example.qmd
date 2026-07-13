@@ -1,0 +1,58 @@
+---
+
+title: "Example Analysis"
+author: "Matthew O'Dell"
+format: html
+---
+
+## Setup
+
+```{r}
+#| label: setup
+#| include: false
+
+library(ggplot2)
+```
+
+```{r}
+#| label: load-functions
+#| include: false
+
+source("../R/helpers.R")
+```
+
+## Example data
+
+```{r}
+#| label: example-data
+
+example_data <- data.frame(
+  species = c("Chinook", "Coho", "Sockeye", "Pink"),
+  count = c(18, 12, 24, 15)
+)
+
+example_data
+```
+
+## Missing values
+
+```{r}
+count_missing(example_data)
+```
+
+## Example figure
+
+```{r}
+#| label: example-figure
+#| fig-cap: "Example salmon observations by species."
+
+ggplot(
+  example_data,
+  aes(x = species, y = count)
+) +
+  geom_col() +
+  labs(
+    x = "Species",
+    y = "Count"
+  )
+```
